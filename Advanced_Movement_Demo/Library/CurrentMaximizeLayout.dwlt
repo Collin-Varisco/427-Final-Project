@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 3768
     height: 2021
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 18763
+  controlID: 3264
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18764
+  controlID: 3477
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 18765
+  controlID: 3204
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 54fbffff56fbffffb6390000923a0000b83a0000f03a0000
+      m_ExpandedIDs: 52fbffff56fbffffc2390000f63a00001c3b0000343b0000503b0000543b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -122.924515, y: 11.218813, z: 86.370056}
+    m_Target: {x: -120.979774, y: 17.124607, z: 90.40381}
     speed: 2
-    m_Value: {x: -122.924515, y: 11.218813, z: 86.370056}
+    m_Value: {x: -120.979774, y: 17.124607, z: 90.40381}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -358,13 +358,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.26893657, y: 0.30649126, z: -0.09079237, w: 0.90857315}
+    m_Target: {x: -0.04269781, y: 0.9573132, z: 0.19673279, w: 0.20746842}
     speed: 2
-    m_Value: {x: 0.26893494, y: 0.30648938, z: -0.09079182, w: 0.9085676}
+    m_Value: {x: -0.04269741, y: 0.9573043, z: 0.19673096, w: 0.2074665}
   m_Size:
-    m_Target: 4.574497
+    m_Target: 4.7255025
     speed: 2
-    m_Value: 4.574497
+    m_Value: 4.7255025
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -540,22 +540,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo
+  m_LastProjectPath: /home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba3b0000
-    m_LastClickedID: 15290
-    m_ExpandedIDs: 00000000ae3b000000ca9a3b
+    m_SelectedIDs: 243c0000
+    m_LastClickedID: 15396
+    m_ExpandedIDs: 00000000163c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -583,7 +583,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ae3b000000ca9a3b
+    m_ExpandedIDs: 00000000163c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,9 +608,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ee390000
-    m_LastClickedInstanceID: 14830
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 643a0000
+    m_LastClickedInstanceID: 14948
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -660,9 +660,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 72
-    y: 1144
+    y: 1769
     width: 3491
-    height: 975
+    height: 350
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 MonoBehaviour:
@@ -721,7 +721,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 14830
+  m_LastInspectedObjectInstanceID: 14948
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:

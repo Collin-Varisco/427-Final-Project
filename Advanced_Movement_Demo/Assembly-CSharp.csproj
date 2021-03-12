@@ -36,16 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\CannonShooter.cs" />
-     <Compile Include="Assets\Scripts\Cannon.cs" />
-     <Compile Include="Assets\TrackPlayer.cs" />
-     <Compile Include="Assets\Scripts\DetectObs.cs" />
-     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
-     <Compile Include="Assets\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\ShootCannon.cs" />
-     <Compile Include="Assets\Scripts\CustomTag.cs" />
-     <Compile Include="Assets\Prefabs\GUN\BulletScript.cs" />
+     <Compile Include="Assets\Scripts\Movement\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\CannonShooter.cs" />
+     <Compile Include="Assets\Scripts\Movement\DetectObs.cs" />
+     <Compile Include="Assets\Scripts\Movement\RigidbodyFirstPersonController.cs" />
+     <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Movement\CustomTag.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\BulletScript.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/crisco/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -266,7 +263,7 @@
         <HintPath>/home/crisco/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/home/crisco/Unity/Hub/Editor/2020.2.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -614,31 +611,31 @@
         <HintPath>/home/crisco/Unity/Hub/Editor/2020.2.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>/home/crisco/Unity/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>/home/crisco/Unity/427-Final-Project/427-Final-Project/Advanced_Movement_Demo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
