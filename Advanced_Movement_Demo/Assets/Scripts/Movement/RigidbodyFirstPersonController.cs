@@ -15,6 +15,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float SpeedInAir = 8.0f;   // Speed when onair
             public float JumpForce = 30f;
+            public float runSpeed = 7.0f;
+            public float slideSpeed = 5.0f;
 
             [HideInInspector] public float CurrentTargetSpeed = 8f;
             
@@ -58,6 +60,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public bool Wallrunning;
 
+        //Slide
+        Rigidbody rig;
+        CapsuleCollider collider;
+        float originalHeight;
+        public float reducedHeight;
+        public float slideSpeed = 5f;
 
 
         private Rigidbody m_RigidBody;
@@ -65,6 +73,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private bool  m_IsGrounded;
 
+        private float slideTimer = 0.0f;
+    
 
         public Vector3 Velocity
         {
@@ -76,12 +86,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             get { return m_IsGrounded; }
         }
 
-        
-
+        void Start()
+        {
+            collider = GetComponent<CapsuleCollider>();
+            rig = GetComponent<Rigidbody>();
+            originalHeight = collider.height;
+        }
 
         private void Awake()
         {
-            
             canrotate = true;
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
@@ -128,6 +141,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             mouseLook.CamGoBackAll(transform, cam.transform);
 
         }
+
+        private void Sliding(){
+            if(timer >= limit){
+                isSliding = false;
+            } 
+            collider.height = reducedHeight;
+            rig.AddForce(transform.forward * slideSpeed, ForceMode.VelocityChange);
+        }
+
+        private void up(){
+            collider.height = originalHeight;
+        }
+
+        //Sliding condition variables
+        private float timer = 0.0f;
+        private float limit = 0.2f;
+        bool isSliding;
+        private float spamTimer = 0.0f;
+        private float spamLimit = 3.0f;
+        private bool spamTimerActive = false;
+
         private void FixedUpdate()
         {
             GroundCheck();
@@ -138,13 +172,46 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Vector3 inputVector = new Vector3(h, 0, v);
             inputVector = Vector3.ClampMagnitude(inputVector, 1);
 
+            //Time sliding
+            if(isSliding == true)
+            {
+                timer += Time.deltaTime;
+            } 
+            //prevents spamming of slide
+            if(spamTimerActive){
+               spamTimer += Time.deltaTime; 
+               if(spamTimer >= spamLimit){
+                   spamTimerActive = false;
+               }
+            }
+
             //grounded
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && m_IsGrounded && !Wallrunning)
             {
                 if (Input.GetAxisRaw("Vertical") > 0.3f)
                 {
-                    m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
+                    if(Input.GetKey("left shift")){
+                        m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.runSpeed * Mathf.Abs(inputVector.z));
+
+                    if(Input.GetKey("c") && !isSliding &&!spamTimerActive){
+                        isSliding = true; 
+                        spamTimerActive = true;
+                    }
+                    
+                    if(isSliding){
+                        Sliding();
+                    } else {
+                        up();
+                    }
+
+                    } else {
+                        m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
+                    }
                 }
+                
+
+
+
                 if (Input.GetAxisRaw("Vertical") < -0.3f)
                 {
                     m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * -movementSettings.BackwardSpeed * Mathf.Abs(inputVector.z));

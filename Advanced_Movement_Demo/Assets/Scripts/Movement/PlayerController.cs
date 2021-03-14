@@ -48,6 +48,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 RecordedMoveToPosition; //the position of the vault end point in world space to move the player to
     private Vector3 RecordedStartPosition; // position of player right before vault
     // Start is called before the first frame update
+
+    public float height;
+
+
     void Start()
     {
         rbfps = GetComponent<RigidbodyFirstPersonController>();
