@@ -9,6 +9,8 @@ public class CannonShooter : MonoBehaviour
     public GameObject play;
     public Player the_Player;
 
+    private float destroyTime = 3.0f;
+
     public float delay = 5.0f;
     private float lastFired = 0.0f;
     private bool targetSafe = false;
@@ -59,7 +61,7 @@ public class CannonShooter : MonoBehaviour
             GameObject obj;
             obj = Instantiate(cannonball, this.transform.position, this.transform.rotation) as GameObject;
             obj.GetComponent<Rigidbody>().AddForce(transform.forward*10000.0f);
-
+            Destroy(obj, destroyTime);
         }
     }
 
