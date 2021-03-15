@@ -6,17 +6,44 @@ public class CannonShooter : MonoBehaviour
 {
     public Transform player = null;
     public GameObject cannonball = null;
+    public GameObject play;
+    public Player the_Player;
 
-    public float minDelay = 2.0f;
-    public float maxDelay = 4.0f;
-
+    public float delay = 5.0f;
     private float lastFired = 0.0f;
-    private float delay = 0.0f;
+    private bool targetSafe = false;
+
+    private int exitSafeZone = 0; 
+    private float exitSafeZoneTimer = 0.0f;
+    public float exitSafeZoneDelay = 4.0f;
+
+
+    void Start(){
+        play = GameObject.Find("PlayerController");
+        the_Player = play.GetComponent<Player>();
+    }
 
     private void Update()
     {
-        TrackPlayer();
-        ShootCannon();
+        targetSafe = the_Player.safe;
+        if(targetSafe){
+            exitSafeZone = 1;
+        }
+        if(!targetSafe && exitSafeZone == 1){
+            exitSafeZone = 2;
+        }
+        if(exitSafeZone == 2){
+            exitSafeZoneTimer += Time.deltaTime;
+            if(exitSafeZoneTimer >= exitSafeZoneDelay){
+                exitSafeZone = 0;
+                exitSafeZoneTimer = 0.0f;
+            }
+        }
+
+        if(!targetSafe && exitSafeZone == 0){
+            TrackPlayer();
+            ShootCannon();
+        }
     }
 
     void TrackPlayer ()
@@ -29,17 +56,11 @@ public class CannonShooter : MonoBehaviour
         if (Time.time > lastFired + delay)
         {
             lastFired = Time.time;
-            delay = GetRandom();
             GameObject obj;
             obj = Instantiate(cannonball, this.transform.position, this.transform.rotation) as GameObject;
             obj.GetComponent<Rigidbody>().AddForce(transform.forward*10000.0f);
 
         }
-    }
-
-    float GetRandom()
-    {
-        return Random.Range(minDelay, maxDelay);
     }
 
 }

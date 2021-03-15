@@ -43,6 +43,8 @@
      <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Movement\CustomTag.cs" />
      <Compile Include="Assets\Scripts\Projectiles\BulletScript.cs" />
+     <Compile Include="Assets\Scripts\Obstacles\ObjectMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/crisco/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

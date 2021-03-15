@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public float height;
 
 
+
     void Start()
     {
         rbfps = GetComponent<RigidbodyFirstPersonController>();
