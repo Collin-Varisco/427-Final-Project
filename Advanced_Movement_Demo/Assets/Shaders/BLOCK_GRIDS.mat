@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BLOCK_GRIDS
-  m_Shader: {fileID: -6465566751694194690, guid: ce8b251858acb5d17aa84ed75a3819cf, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: aefca33c88e842ddfb485b22a6e62f6a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
@@ -34,7 +34,7 @@ Material:
     m_Floats:
     - Vector1_97f85d9c8c3245748e685a74226d8563: 1
     m_Colors:
-    - Color_53a852f486eb44799236c1a4401bb437: {r: 1, g: 0, b: 0, a: 0}
+    - Color_53a852f486eb44799236c1a4401bb437: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_74b6fbde7ce94704ad081ea516c5b66e: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_94e481edb757477abeed91755e92fc54: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -29,6 +29,10 @@ public class Player : MonoBehaviour
             safe = true;
         } else {
             safe = false;
+        }
+
+        if(other.gameObject.CompareTag("CompleteZone")){
+            SceneManager.LoadScene("LevelComplete");
         }
     }
 }

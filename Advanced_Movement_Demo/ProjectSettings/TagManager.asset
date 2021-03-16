@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - SafeZone
   - cannonball
+  - CompleteZone
   layers:
   - Default
   - TransparentFX

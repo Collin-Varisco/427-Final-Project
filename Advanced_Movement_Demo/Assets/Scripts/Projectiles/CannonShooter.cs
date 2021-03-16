@@ -19,15 +19,33 @@ public class CannonShooter : MonoBehaviour
     private float exitSafeZoneTimer = 0.0f;
     public float exitSafeZoneDelay = 4.0f;
 
+    // Hit by bullet variables
+    private bool disabled = false;
+    private float disabledTimer = 0.0f;
+    public float disabledTimeLimit = 6.0f;
 
     void Start(){
         play = GameObject.Find("PlayerController");
         the_Player = play.GetComponent<Player>();
     }
 
+    void OnTriggerEnter(Collider col){
+        if(col.gameObject.CompareTag("Bullet")){
+           disabled = true; 
+        }
+    }
+
     private void Update()
     {
         targetSafe = the_Player.safe;
+
+        if(disabled){
+            disabledTimer += Time.deltaTime;
+            if(disabledTimer >= disabledTimeLimit){
+                disabledTimer = 0.0f; 
+                disabled = false;
+            }
+        }
         if(targetSafe){
             exitSafeZone = 1;
         }
@@ -42,7 +60,7 @@ public class CannonShooter : MonoBehaviour
             }
         }
 
-        if(!targetSafe && exitSafeZone == 0){
+        if(!targetSafe && exitSafeZone == 0 && !disabled){
             TrackPlayer();
             ShootCannon();
         }
